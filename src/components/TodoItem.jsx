@@ -4,7 +4,6 @@ import { deleteTodo, editTodo } from '../redux/TodoSlice';
 import Modal from './Modal';
 
 const TodoItem = ({ todo }) => {
-  // const [isEditing, setIsEditing] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [editText, setEditText] = useState(todo.text);
   const dispatch = useDispatch();
@@ -16,7 +15,6 @@ const TodoItem = ({ todo }) => {
   const handleEdit = () => {
     if (editText.trim()) {
       dispatch(editTodo({ id: todo.id, newText: editText }));
-      // setIsEditing(false);
       setShowModal(false);
     }
   };

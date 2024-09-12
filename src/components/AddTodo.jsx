@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addTodo } from '../redux/TodoSlice';
 import SearchBar from './SearchBar';
-import './style.scss';
 import TodoList from './TodoList';
 import Modal from './Modal'; // New Modal Component
 
