@@ -3,18 +3,18 @@ import { useDispatch } from 'react-redux';
 import { addTodo } from '../redux/TodoSlice';
 import SearchBar from './SearchBar';
 import TodoList from './TodoList';
-import Modal from './Modal'; // New Modal Component
+import Modal from './Modal';
 
 const AddTodo = () => {
-  const [showModal, setShowModal] = useState(false); // State to control modal visibility
+  const [showModal, setShowModal] = useState(false);
   const [newTodo, setNewTodo] = useState('');
   const dispatch = useDispatch();
 
   const handleAddTodo = () => {
     if (newTodo.trim()) {
       dispatch(addTodo(newTodo));
-      setNewTodo(''); // Clear input field
-      setShowModal(false); // Close the modal after adding the todo
+      setNewTodo('');
+      setShowModal(false);
     }
   };
 
